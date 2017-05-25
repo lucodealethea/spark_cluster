@@ -49,14 +49,14 @@ $ docker inspect 54145407w96 | grep IPAddress
  "IPAddress": "172.18.0.2"
  
  
-#### Connect to the master using the Spark Shell.
-
-##### Install a Spark Client 
+#### Install a Spark Client on the host (why not in a dedicated container ?)
 
 $ cd ~/Downloads
 $ wget https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.7.tgz
-
 $ tar xvzf spark-2.1.1-bin-hadoop2.7.tgz ~/spark
+$ cd ~/spark/spark-2.1.1-bin-hadoop2.7/bin
 
+#### Connect to the master using the Spark Shell.
 
+$ ./spark-shell --master spark://172.18.0.2:7077
 
