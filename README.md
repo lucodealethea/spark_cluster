@@ -6,11 +6,11 @@
 - A closed network subnet where the docker containers can talk to each other.
 - A default gateway for the containers for outbound traffic.
 - Installed images, you literally need to do nothing.
-- 
+ 
 #### Prerequisites:
 
-    Installed docker, docker-compose ( 1.9.0 or higher )
-    Linux box (or Windows, not tested here).
+- Installed docker, docker-compose ( 1.9.0 or higher )
+- Linux box (or Windows, not tested here).
     
 #### Install Spark:
 
@@ -50,4 +50,12 @@ $ docker inspect 54145407w96 | grep IPAddress
  
  
 #### Connect to the master using the Spark Shell.
+
+##### Install a Spark Client 
+
+cd ~/Downloads
+wget https://d3kbcqa49mib13.cloudfront.net/spark-2.1.1-bin-hadoop2.7.tgz
+tar xvzf spark-2.1.1-bin-hadoop2.7.tgz ~/spark
+
+
 
